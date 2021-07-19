@@ -1,0 +1,15 @@
+environment:
+  name: test
+
+environmentUrl:
+  test: https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+  prod: https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+
+waitTime:
+  test: "30"
+  prod: "30"
+
+driver:
+  test: chrome
+  prod: chrome
+

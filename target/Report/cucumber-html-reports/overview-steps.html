@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>testingproject</td>
+            <td>15 Jul 2021, 19:16</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iClickOnHowMuchICouldBorroow()</td>
+              <td>2</td>
+              <td class="duration" data-value="131273276">0.131</td>
+              <td class="duration" data-value="131273276">0.157</td>
+              <td class="duration" data-value="262546552">0.262</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iClickOnStartOverButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="67414821">0.067</td>
+              <td class="duration" data-value="67414821">0.067</td>
+              <td class="duration" data-value="67414821">0.067</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterApplicationType(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="145353768">0.145</td>
+              <td class="duration" data-value="145353768">0.145</td>
+              <td class="duration" data-value="145353768">0.145</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterCurrentHomeLoanRepaymentsAsHomeLoanRepayments(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="150678861">0.150</td>
+              <td class="duration" data-value="150678861">0.150</td>
+              <td class="duration" data-value="150678861">0.150</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterMyIncomeBeforeTaxAsIncomeBeforeTax(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="216327377">0.216</td>
+              <td class="duration" data-value="216327377">0.216</td>
+              <td class="duration" data-value="216327377">0.216</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterMyLivingExpensesAsLivingExpenses(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="302534207">0.302</td>
+              <td class="duration" data-value="302534207">0.420</td>
+              <td class="duration" data-value="605068414">0.605</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterMyOtherIncomeAsOtherIncome(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="204241069">0.204</td>
+              <td class="duration" data-value="204241069">0.204</td>
+              <td class="duration" data-value="204241069">0.204</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterNumberOfDependants(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="105808536">0.105</td>
+              <td class="duration" data-value="105808536">0.105</td>
+              <td class="duration" data-value="105808536">0.105</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterOtherCommitmentsAsOtherCommitments(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="141942856">0.141</td>
+              <td class="duration" data-value="141942856">0.141</td>
+              <td class="duration" data-value="141942856">0.141</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterOtherLoanRepaymentsAsOtherLoanRepayments(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="168326384">0.168</td>
+              <td class="duration" data-value="168326384">0.168</td>
+              <td class="duration" data-value="168326384">0.168</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterPropertyYouWouldLikeToBuyAs(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="81358100">0.081</td>
+              <td class="duration" data-value="81358100">0.081</td>
+              <td class="duration" data-value="81358100">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iEnterTotalCreditCardLimitsAsCcLimits(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="201272340">0.201</td>
+              <td class="duration" data-value="201272340">0.201</td>
+              <td class="duration" data-value="201272340">0.201</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iNavigateToBorrowerCalculatorPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="190094153">0.190</td>
+              <td class="duration" data-value="190094153">0.190</td>
+              <td class="duration" data-value="190094153">0.190</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iSeeBorrowerrorText()</td>
+              <td>1</td>
+              <td class="duration" data-value="38672503">0.038</td>
+              <td class="duration" data-value="38672503">0.038</td>
+              <td class="duration" data-value="38672503">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.iValidateThatCorrectBorrowingCapacityBorrowingCapacityIsDisplayed(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2052862571">2.052</td>
+              <td class="duration" data-value="2052862571">2.052</td>
+              <td class="duration" data-value="2052862571">2.052</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">BorrowingCalculatorSteps.theFormShouldBeRefreshed()</td>
+              <td>1</td>
+              <td class="duration" data-value="224715260">0.224</td>
+              <td class="duration" data-value="224715260">0.224</td>
+              <td class="duration" data-value="224715260">0.224</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RunContext.init(Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="13310201605">13.310</td>
+              <td class="duration" data-value="13310201605">13.806</td>
+              <td class="duration" data-value="26620403211">26.620</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RunContext.tearDown(Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="1952681189">1.952</td>
+              <td class="duration" data-value="1952681189">2.070</td>
+              <td class="duration" data-value="3905362379">3.905</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>18</td>
+            <td>22</td>
+            <td class="duration">1.608</td>
+            <td class="duration">26.620</td>
+            <td class="duration">35.382</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
